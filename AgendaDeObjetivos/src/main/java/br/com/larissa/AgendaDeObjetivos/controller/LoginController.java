@@ -16,6 +16,6 @@ public class LoginController {
 		
 			return ResponseEntity.ok("sucesso");
 	}
-	return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("erro");
-}
+		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("erro");
+	}
 }
