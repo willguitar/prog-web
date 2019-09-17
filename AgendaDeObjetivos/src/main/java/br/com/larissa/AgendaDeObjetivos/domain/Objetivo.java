@@ -2,16 +2,30 @@ package br.com.larissa.AgendaDeObjetivos.domain;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@Entity
+@Table(name="objetivos")
 public class Objetivo {
 
+	@Id
+	@GeneratedValue
+	private Long id;
+	
 	@JsonProperty
 	private String titulo;
+	
 	
 	@JsonProperty
 	private String descricao;
 	
+	@Column(name = "data_maxima_para_execucao")
 	@JsonProperty
 	private LocalDate dataMaximaParaExecucao;
 	
